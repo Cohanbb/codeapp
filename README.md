@@ -1,2 +1,2 @@
-# codeapp
-Repository for code app on ipad.
+# mycode
+Repository for personal code.
