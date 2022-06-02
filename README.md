@@ -1,2 +1,2 @@
 # mycode
-Repository for personal code.
+Mycode for learning and experimentation.
