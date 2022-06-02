@@ -41,7 +41,7 @@ void Delete(sqlist &L, int i, int &e) {
     e = L.data[i-1];
     for (int j = i; j < L.length; j++)
 	L.data[j-1] = L.data[j];
-    L.data[L.length] = 0;
+    L.data[L.length-1] = 0;
     L.length--;
 }
 
@@ -52,8 +52,12 @@ void Printlist(sqlist L) {
 
 int main() {
    sqlist list;
+   int e;
    InitList(list);
-   Insert(list, 1, 1);
-   Insert(list, 2, 3);
+   Insert(list, 1, 1); //insert 1 at the first position
+   Insert(list, 2, 3); //insert 3 at the second position
+   Delete(list, 1, e); //delete content at the first position
    Printlist(list);
+   printf("%d \n", e);
+   return 0;
 }
