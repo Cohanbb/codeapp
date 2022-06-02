@@ -1,7 +1,9 @@
 /*
- We all know when a variable directly be used as parameter of function, the function can not change the variable's value, because the variable just plays as a formal parameter of the function, actually the function just uses the copy of the variable as parameter. If we manage to make the function change the variable's value, we should use pointer or reference of the variable as parameter.
- Now the situation changes, a pointer(or reference) be parameter of a function, and we manage to make the function change the pointer's value, in another words, we hope the function can change the pointer pointing. How to do that? 
-The code below includes two functions test1 and test2, test1 uses pointer as parameter and test2 uses pointer of pointer as parameter.
+ We all know when a variable directly be used as a parameter of function, the function can not change the variable's value, because the variable just plays as a formal parameter of the function. 
+ Actually the function just uses the copies of the variables as parameters. If we manage to make the function change the variables's values, we should use pointer or reference of the variables as parameters.
+ Now the situation changes, a pointer(or reference) be a parameter of function, and we manage to make the function change the pointer's value, in another words, we hope the function can change the pointer pointing.
+ How to do that? 
+ The code below includes two functions test1 and test2, test1 uses pointer as a parameter and test2 uses pointer of pointer as a parameter.
 */
 
 
