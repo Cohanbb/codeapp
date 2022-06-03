@@ -1,4 +1,4 @@
-# cpp
+# C++
 
 This directory is for C/C++ program codes. 
 
