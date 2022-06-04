@@ -18,7 +18,7 @@ bool Empty(sqlist L) {
     return false;
 }
 
-void Insert(sqlist &L, int i, int e) {
+void InsertElem(sqlist &L, int i, int e) {
     if (i <= 0 || i > L.length+1) {
         printf("Invalid Input!\n");
 	return;
@@ -33,7 +33,7 @@ void Insert(sqlist &L, int i, int e) {
     L.length++;
 }
 
-void Delete(sqlist &L, int i, int &e) {
+void DeleteElem(sqlist &L, int i, int &e) {
     if (i <= 0 || i > L.length) {
         printf("Invalid Input!");
 	return;
@@ -45,19 +45,23 @@ void Delete(sqlist &L, int i, int &e) {
     L.length--;
 }
 
-void Printlist(sqlist L) {
+void PrintList(sqlist L) {
     for (int i = 1; i <= L.length; i++) 
 	printf("%d \n", L.data[i-1]);
+}
+
+void LocateElem(sqlist L) {
+
 }
 
 int main() {
    sqlist list;
    int e;
    InitList(list);
-   Insert(list, 1, 1); //insert 1 at the first position
-   Insert(list, 2, 3); //insert 3 at the second position
-   Delete(list, 1, e); //delete content at the first position
-   Printlist(list);
+   InsertElem(list, 1, 1); //insert 1 at the first position
+   InsertElem(list, 2, 3); //insert 3 at the second position
+   DeleteElem(list, 1, e); //delete content at the first position
+   PrintList(list);
    printf("%d \n", e);
    return 0;
 }
