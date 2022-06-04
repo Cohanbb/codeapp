@@ -1,5 +1,3 @@
 #ignore bin directory
 
-/cpp/bin/*
-/cpp/DS/bin/*
-
+bin/
