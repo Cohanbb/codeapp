@@ -20,11 +20,11 @@ bool Empty(sqlist L) {
 
 void InsertElem(sqlist &L, int i, int e) {
     if (i <= 0 || i > L.length+1) {
-        printf("Invalid Input!\n");
-	return;
+        printf("Invalid Position!\n");
+	    return;
     }
     if (L.length == Maxsize) {
-	printf("Oversize!");
+	    printf("Oversize!");
         return;
     }
     for (int j = L.length; j >= i; j--)
@@ -35,8 +35,8 @@ void InsertElem(sqlist &L, int i, int e) {
 
 void DeleteElem(sqlist &L, int i, int &e) {
     if (i <= 0 || i > L.length) {
-        printf("Invalid Input!");
-	return;
+        printf("Invalid Position!");
+	    return;
     }
     e = L.data[i-1];
     for (int j = i; j < L.length; j++)
@@ -47,21 +47,28 @@ void DeleteElem(sqlist &L, int i, int &e) {
 
 void PrintList(sqlist L) {
     for (int i = 1; i <= L.length; i++) 
-	printf("%d \n", L.data[i-1]);
+	    printf("%d\n", L.data[i-1]);
 }
 
-void LocateElem(sqlist L) {
-
+void LocateElem(sqlist L, int &i, int e) {
+    for (int j = 0; j < L.length; j++) {
+        if (L.data[j] == e) {
+            i = j + 1;
+            return;
+        }
+    }
+    printf("Not Found!\n");
 }
 
 int main() {
    sqlist list;
-   int e;
+   int e, i;
    InitList(list);
    InsertElem(list, 1, 1); //insert 1 at the first position
    InsertElem(list, 2, 3); //insert 3 at the second position
    DeleteElem(list, 1, e); //delete content at the first position
    PrintList(list);
    printf("%d \n", e);
+   LocateElem(list, i, 1);
    return 0;
 }
