@@ -18,7 +18,7 @@ Update soon.
 Update soon.  
 即将更新。  
 
-## Figure 图
+## Gragh 图
 
 Update soon.
 即将更新。
