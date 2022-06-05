@@ -8,16 +8,16 @@ Mycode for learning and experimentation.
 
 It contains the code implementation of 
 
-* linear list  
-* stack and queue  
-* tree  
-* graph  
-* search  
-* sort  
+* Linear List  
+* Stack and Queue  
+* Tree  
+* Graph  
+* Search  
+* Sort  
 
 using c++ as the programming language.
 
-Continuous updating.
+Continuously updating.
 
 <hr>
 
