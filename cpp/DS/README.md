@@ -2,10 +2,10 @@
 
 ## Linear List 线性表
 
-[Sequential List](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqList.cpp)
+[Sequential List](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqList.cpp) |
 [顺序表](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqList.cpp)
 
-[Link List](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/LinkList.cpp)
+[Link List](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/LinkList.cpp) | 
 [链表](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/LinkList.cpp)
 
 ## Stack and Queue 栈和队列
@@ -37,7 +37,7 @@ Including [Bubble Sort, Quick Sort](https://github.com/Cohanbb/mycode/blob/main/
 
 ### Insert Sort 插入排序
 
-Including [Insert Sort, Binary Insert Sort, Shell Sort].(https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp)   
+Including [Insert Sort, Binary Insert Sort, Shell Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp).   
 包括[直接插入排序、折半插入排序、希尔排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp)。
 
 
