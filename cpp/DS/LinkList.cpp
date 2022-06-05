@@ -10,7 +10,7 @@ void InitList(linklist &L) {
     L = (lnode *)malloc(sizeof(lnode));
     if (L == NULL) {
         printf("Fail To Init!\n");
-	    return;
+	return;
     }
     L->next = NULL;
 }
@@ -22,7 +22,7 @@ bool Empty(linklist L) {
 lnode *GetElem(linklist L, int i) {
     if (i < 0) {
         printf("Invalid Position!\n");
-	    return NULL;
+	return NULL;
     } 
     if (i == 0)
 	    return L;
