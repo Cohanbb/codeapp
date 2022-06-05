@@ -8,7 +8,7 @@ typedef struct SeqList {
 
 void InitList(sqlist &L) {
     for (int i = 0; i < Maxsize; i++)
-       L.data[i] = 0;
+        L.data[i] = 0;
     L.length = 0;
 }
 
@@ -19,7 +19,7 @@ bool Empty(sqlist L) {
 }
 
 void InsertElem(sqlist &L, int i, int e) {
-    if (i <= 0 || i > L.length+1) {
+    if (i <= 0 || i > L.length + 1) {
         printf("Invalid Position!\n");
 	    return;
     }
@@ -28,8 +28,8 @@ void InsertElem(sqlist &L, int i, int e) {
         return;
     }
     for (int j = L.length; j >= i; j--)
-        L.data[j] = L.data[j-1];
-    L.data[i-1] = e;
+        L.data[j] = L.data[j - 1];
+    L.data[i - 1] = e;
     L.length++;
 }
 
@@ -40,14 +40,14 @@ void DeleteElem(sqlist &L, int i, int &e) {
     }
     e = L.data[i-1];
     for (int j = i; j < L.length; j++)
-	L.data[j-1] = L.data[j];
-    L.data[L.length-1] = 0;
+	L.data[j - 1] = L.data[j];
+    L.data[L.length - 1] = 0;
     L.length--;
 }
 
 void PrintList(sqlist L) {
     for (int i = 1; i <= L.length; i++) 
-	    printf("%d\n", L.data[i-1]);
+	    printf("%d\n", L.data[i - 1]);
 }
 
 void LocateElem(sqlist L, int &i, int e) {
