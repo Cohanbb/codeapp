@@ -25,7 +25,7 @@ lnode *GetElem(linklist L, int i) {
 	return NULL;
     } 
     if (i == 0)
-	    return L;
+	return L;
     lnode *p = L;
     while (p && i > 0) {
         p =  p->next;
