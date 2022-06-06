@@ -40,6 +40,11 @@ void quick_sort(int a[], int low, int high) {
     quick_sort(a, i + 1, high);
 }
 
+void showarray(int a[], int n) {
+    for (int i = 0; i < n; i++)
+        printf("%d\n", a[i]);
+}
+
 int main() {
     int a[10];
     for (int i = 0; i < 10; i++)
@@ -47,12 +52,10 @@ int main() {
 
     bubble_sort(a, 10);
     printf("Bubble Sort: \n");
-    for (int i = 0; i < 10; i++)
-        printf("%d\n", a[i]);
+    showarray(a,10);
 
     quick_sort(a, 0, 9);
     printf("Quick Sort: \n");
-    for (int i = 0; i < 10; i++)
-        printf("%d\n", a[i]);
+    showarray(a,10);
     return 0;
 }
