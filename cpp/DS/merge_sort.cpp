@@ -38,6 +38,11 @@ void merge_sort(int a[], int n) {
     free(temp);
 }
 
+void showarray(int a[], int n) {
+    for (int i = 0; i < n; i++)
+        printf("%d\n", a[i]);
+}
+
 int main() {
     int a[10];
     for (int i = 0; i < 10; i++)
@@ -45,7 +50,6 @@ int main() {
 
     merge_sort(a, 10);
     printf("Merge Sort: \n");
-    for (int i = 0; i < 10; i++)
-        printf("%d\n", a[i]);
+    showarray(a, 10);
     return 0;
 }

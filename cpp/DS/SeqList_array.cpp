@@ -6,6 +6,7 @@ typedef struct SeqList {
     int data[Maxsize];
 } sqlist;
 
+/*Initialize Sequential List 初始化顺序表*/
 void InitList(sqlist &L) {
     for (int i = 0; i < Maxsize; i++)
         L.data[i] = 0;
@@ -18,6 +19,7 @@ bool Empty(sqlist L) {
     return false;
 }
 
+/*Insert element 插入元素*/
 void InsertElem(sqlist &L, int i, int e) {
     if (i <= 0 || i > L.length + 1) {
         printf("Invalid Position!\n");
@@ -33,6 +35,7 @@ void InsertElem(sqlist &L, int i, int e) {
     L.length++;
 }
 
+/*Delete element 删除元素*/
 void DeleteElem(sqlist &L, int i, int &e) {
     if (i <= 0 || i > L.length) {
         printf("Invalid Position!");
@@ -45,11 +48,13 @@ void DeleteElem(sqlist &L, int i, int &e) {
     L.length--;
 }
 
+/*Print Sequential List 打印顺序表*/
 void PrintList(sqlist L) {
     for (int i = 1; i <= L.length; i++)
         printf("%d\n", L.data[i - 1]);
 }
 
+/*Search element with value 按值查找*/
 void LocateElem(sqlist L, int &i, int e) {
     for (int j = 0; j < L.length; j++) {
         if (L.data[j] == e) {

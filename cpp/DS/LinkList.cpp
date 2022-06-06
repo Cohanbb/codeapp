@@ -6,6 +6,7 @@ typedef struct LNode {
     struct LNode *next;
 } lnode, *linklist;
 
+/*Initialize Link List 初始化链表*/
 void InitList(linklist &L) {
     L = (lnode *)malloc(sizeof(lnode));
     if (L == NULL) {
@@ -19,6 +20,7 @@ bool Empty(linklist L) {
     return L->next == NULL;
 }
 
+/*Search element with position 按位查找*/
 lnode *GetElem(linklist L, int i) {
     if (i < 0) {
         printf("Invalid Position!\n");
@@ -34,6 +36,7 @@ lnode *GetElem(linklist L, int i) {
     return p;
 }
 
+/*Insert node 插入节点*/
 void InsertElem(linklist &L, int i, int e) {
     lnode *p = GetElem(L, i - 1);
     if (!p) {
@@ -46,6 +49,7 @@ void InsertElem(linklist &L, int i, int e) {
     p->next = s;
 }
 
+/*Delete node 删除节点*/
 void DeleteElem(linklist &L, int i, int &e) {
     lnode *p = GetElem(L, i - 1);
     if (!p) {
@@ -56,6 +60,7 @@ void DeleteElem(linklist &L, int i, int &e) {
     p->next = p->next->next;
 }
 
+/*Search element with value 按值查找*/
 lnode *LocateElem(linklist L, int e) {
     lnode *p = L->next;
     while (p) {
@@ -67,6 +72,7 @@ lnode *LocateElem(linklist L, int e) {
     return NULL;
 }
 
+/*Print the Link List 打印链表*/
 void PrintList(linklist L) {
     lnode *p = L->next;
     while (p) {
