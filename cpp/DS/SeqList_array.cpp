@@ -62,8 +62,14 @@ void LocateElem(sqlist L, int &i, int e) {
 
 /*Print Sequential List 打印顺序表*/
 void PrintList(sqlist L) {
-    for (int i = 1; i <= L.length; i++)
-        printf("%d\n", L.data[i - 1]);
+    for (int i = 0; i < L.length; i++)
+        printf("%d\n", L.data[i]);
+}
+
+void DestroyList(sqlist *L) {
+    if (L == NULL)
+        return;
+    free(L);
 }
 
 int main() {
@@ -76,5 +82,6 @@ int main() {
    PrintList(list);
    printf("%d \n", e);
    LocateElem(list, i, 1);
+   DestroyList(&list);
    return 0;
 }
