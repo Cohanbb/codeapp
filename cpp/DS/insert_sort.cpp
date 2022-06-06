@@ -45,7 +45,7 @@ void shell_sort(int a[], int n) {
             }
 }
 
-void showarray(inta[], int n) {
+void showarray(int a[], int n) {
     for (int i = 0; i < n; i++)
         printf("%d\n", a[i]);
 }
