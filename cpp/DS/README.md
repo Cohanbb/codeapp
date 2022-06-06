@@ -4,7 +4,7 @@
 
 [Sequential List Using Array ｜ 顺序表「数组实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqList_array.cpp)
 
-[Sequential List Using Pointer｜ 顺序表「指针实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqList_pointer.cpp)
+[Sequential List Using Pointer ｜ 顺序表「指针实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqList_pointer.cpp)
 
 [Link List ｜ 链表](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/LinkList.cpp)
 
@@ -44,37 +44,16 @@ Update soon.
 
 ### Swap Sort 交换排序
 
-Swap Sort includes:
-* [Bubble Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/swap_sort.cpp).  
-* [Quick Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/swap_sort.cpp).  
-
-交换类排序包括：
-* [冒泡排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/swap_sort.cpp)。
-* [快速排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/swap_sort.cpp)。
+[Bubble Sort, Quick Sort ｜ 冒泡排序、快速排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/swap_sort.cpp)
 
 ### Insert Sort 插入排序
 
-Insert Sort includes:
-* [Insert Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp).   
-* [Binary Insert Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp).   
-* [Shell Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp).   
-
-插入类排序包括：
-* [直接插入排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp)。
-* [折半插入排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp)。
-* [希尔排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp)。
+[Insert Sort, Binary Insert Sort, Shell Sort ｜ 直接插入排序、折半插入排序、希尔排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/insert_sort.cpp)    
 
 ### Select Sort 选择排序
 
-Select Sort includes:
-* [Select Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/select_sort.cpp).
-* [Heap Sort](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/select_sort.cpp).
-
-选择排序包括：
-* [选择排序、堆排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/select_sort.cpp)。
-* [堆排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/select_sort.cpp)。
+[Select Sort, Heap Sort ｜ 选择排序、堆排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/select_sort.cpp)
 
 ### Merge Sort 归并排序
 
-[Merge Sort ｜ 归并排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/merge_sort.cpp)
-
+[Merge Sort ｜ 归并排序](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/merge_sort.cpp)  
