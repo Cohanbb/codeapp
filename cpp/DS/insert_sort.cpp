@@ -50,14 +50,17 @@ int main() {
     int a[11];
     for (int i = 0; i < 10; i++)
         scanf("%d", &a[i]);
+
     insert_sort(a, 10);
     printf("Insert Sort: \n");
     for (int i = 0; i < 10; i++)
         printf("%d\n", a[i]);
+
     insert_sortt(a, 10);
     printf("Binary Insert Sort: \n");
     for (int i = 0; i < 10; i++)
         printf("%d\n", a[i]);
+
     shell_sort(a, 10);
     printf("Shell Sort: \n");
     for (int i = 0; i < 10; i++)

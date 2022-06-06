@@ -44,10 +44,12 @@ int main() {
     int a[10];
     for (int i = 0; i < 10; i++)
         scanf("%d", &a[i]);
+
     bubble_sort(a, 10);
     printf("Bubble Sort: \n");
     for (int i = 0; i < 10; i++)
         printf("%d\n", a[i]);
+
     quick_sort(a, 0, 9);
     printf("Quick Sort: \n");
     for (int i = 0; i < 10; i++)
