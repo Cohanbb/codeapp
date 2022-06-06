@@ -3,21 +3,23 @@
 /*Insert Sort 直接插入排序*/
 void insert_sort(int a[], int n) {
     //Differing from other algorithms, insert sorting deals with a[1] ~ a[n] 
-    for (int i = 2; i <= n; i++)
+    int i, j;
+    for (i = 2; i <= n; i++)
         if (a[i] < a[i - 1]) {
             a[0] = a[i];
-            int j;
             for (j = i - 1; a[0] < a[j]; j--) //find the position to insert
                 a[j + 1] = a[j]; //move backwards to making room for inserting
             a[j + 1] = a[0]; //insert the element
         }
 }
 
-/*Insert Sort 2.0 折半插入排序*/
+/*Binary Insert Sort 折半插入排序*/
 void insert_sortt(int a[], int n) {
-    for (int i = 2; i <= n; i++) {
+    int low, high, mid, i, j;
+    for (i = 2; i <= n; i++) {
+        low = 1; 
+        high = i - 1;
         a[0] = a[i];
-        int low = 1, high = i - 1, mid, j;
         while (low <= high) {
             mid = (low + high) / 2;
             if (a[mid] > a[0])
@@ -31,19 +33,31 @@ void insert_sortt(int a[], int n) {
     }
 }
 
-/*Shell Sort 希尔排序
+/*Shell Sort 希尔排序*/
 void shell_sort(int a[], int n) {
-
+    
 }
-*/
+
 
 int main() {
     int a[11];
     for (int i = 1; i < 11; i++)
         scanf("%d", &a[i]);
-    insert_sortt(a, 10);
-    for (int i = 1; i < 11; i++)
+    insert_sort(a, 10);
+    for (int i = 1; i < 11; i++) {
+        printf("Insert Sort: \n");
         printf("%d\n", a[i]);
+    }
+    insert_sortt(a, 10);
+    for (int i = 1; i < 11; i++) {
+        printf("Binary Insert Sort: \n");
+        printf("%d\n", a[i]);
+    }
+    shell_sort(a, 10);
+    for (int i = 1; i < 11; i++) {
+        printf("Shell Sort: \n");
+        printf("%d\n", a[i]);
+    }
     return 0;
 }
 
