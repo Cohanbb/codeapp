@@ -10,10 +10,10 @@
 
 ## Stack and Queue 栈和队列
 
-[Stack 栈](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Stack.cpp). |
+[Stack](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Stack.cpp) |
 [栈](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Stack.cpp).
 
-[Queue 队列](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue.cpp). |
+[Queue](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue.cpp) |
 [队列](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue.cpp).
 
 
