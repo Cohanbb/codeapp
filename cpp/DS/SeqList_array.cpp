@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define Maxsize 20
 
 typedef struct SeqList {
@@ -48,12 +49,6 @@ void DeleteElem(sqlist &L, int i, int &e) {
     L.length--;
 }
 
-/*Print Sequential List 打印顺序表*/
-void PrintList(sqlist L) {
-    for (int i = 1; i <= L.length; i++)
-        printf("%d\n", L.data[i - 1]);
-}
-
 /*Search element with value 按值查找*/
 void LocateElem(sqlist L, int &i, int e) {
     for (int j = 0; j < L.length; j++) {
@@ -63,6 +58,12 @@ void LocateElem(sqlist L, int &i, int e) {
         }
     }
     printf("Not Found!\n");
+}
+
+/*Print Sequential List 打印顺序表*/
+void PrintList(sqlist L) {
+    for (int i = 1; i <= L.length; i++)
+        printf("%d\n", L.data[i - 1]);
 }
 
 int main() {
