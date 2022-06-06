@@ -45,6 +45,10 @@ void shell_sort(int a[], int n) {
             }
 }
 
+void showarray(inta[], int n) {
+    for (int i = 0; i < n; i++)
+        printf("%d\n", a[i]);
+}
 
 int main() {
     int a[11];
@@ -53,18 +57,15 @@ int main() {
 
     insert_sort(a, 10);
     printf("Insert Sort: \n");
-    for (int i = 0; i < 10; i++)
-        printf("%d\n", a[i]);
+    showarray(a,10);
 
     insert_sortt(a, 10);
     printf("Binary Insert Sort: \n");
-    for (int i = 0; i < 10; i++)
-        printf("%d\n", a[i]);
+    showarray(a, 10);
 
     shell_sort(a, 10);
     printf("Shell Sort: \n");
-    for (int i = 0; i < 10; i++)
-        printf("%d\n", a[i]);
+    showarray(a, 10);
     return 0;
 }
 
