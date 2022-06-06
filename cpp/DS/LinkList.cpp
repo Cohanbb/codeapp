@@ -84,6 +84,6 @@ int main() {
     InsertElem(list, 3, 3);
     DeleteElem(list, 2, e);
     PrintList(list);
-    printf("delete element is %d\n", e);
+    printf("Delete element is %d\n", e);
     return 0;
 }

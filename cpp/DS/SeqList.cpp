@@ -21,10 +21,10 @@ bool Empty(sqlist L) {
 void InsertElem(sqlist &L, int i, int e) {
     if (i <= 0 || i > L.length + 1) {
         printf("Invalid Position!\n");
-	return;
+        return;
     }
     if (L.length == Maxsize) {
-	printf("Oversize!");
+        printf("Oversize!");
         return;
     }
     for (int j = L.length; j >= i; j--)
@@ -36,7 +36,7 @@ void InsertElem(sqlist &L, int i, int e) {
 void DeleteElem(sqlist &L, int i, int &e) {
     if (i <= 0 || i > L.length) {
         printf("Invalid Position!");
-	return;
+        return;
     }
     e = L.data[i-1];
     for (int j = i; j < L.length; j++)
