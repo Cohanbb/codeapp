@@ -31,3 +31,6 @@ void Destroy(sqstack *S) {
 
 }
 
+int main() {
+    
+}
