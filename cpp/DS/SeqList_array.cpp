@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <malloc.h>
 
 #define Maxsize 20
 
@@ -70,6 +71,7 @@ void DestroyList(sqlist *L) {
     if (L == NULL)
         return;
     free(L);
+    L = NULL;
 }
 
 int main() {
