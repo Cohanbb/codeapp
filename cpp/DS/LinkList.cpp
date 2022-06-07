@@ -83,14 +83,13 @@ void PrintList(linklist L) {
 
 /*Destroy Link List 销毁链表 */
 void DestroyList(linklist &L) {
-    lnode *q, *p = L->next;
-    while (p) {
-        q = p->next;
+    lnode *p;
+    while (L) {
+        p = L;
+        L = L->next;
         free(p);
-        p = q;
+        p = NULL;
     }
-    free(L);
-    L = NULL;
 }
 
 int main() {
