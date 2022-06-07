@@ -74,7 +74,9 @@ void DestroyList(sqlist *L) {
     if (L == NULL)
         return;
     free(L->data);
+    L->data = NULL;
     free(L);
+    L = NULL;
 }
 
 int main() {

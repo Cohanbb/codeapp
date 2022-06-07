@@ -72,7 +72,7 @@ lnode *LocateElem(linklist L, int e) {
     return NULL;
 }
 
-/*Print the Link List 打印链表*/
+/*Print Link List 打印链表*/
 void PrintList(linklist L) {
     lnode *p = L->next;
     while (p) {
@@ -81,6 +81,7 @@ void PrintList(linklist L) {
     }
 }
 
+/*Destroy Link List 销毁链表 */
 void DestroyList(linklist &L) {
     lnode *q, *p = L->next;
     while (p) {
@@ -89,6 +90,7 @@ void DestroyList(linklist &L) {
         p = q;
     }
     free(L);
+    L = NULL;
 }
 
 int main() {

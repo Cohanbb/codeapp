@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <malloc.h>
 
+typedef struct A {
+    int a, b;
+} A;
+
 int main() {
-    int a = 1;
-    int *p = (int *)malloc(sizeof(int));
-    *p = 1;
+    A *p = (A *)malloc(sizeof(A)); 
+    p->a = 1;
+    p->b = 2;
+    printf("%p\n", p);
     free(p);
-    *p = 3;
-    printf("%d\n", *p);
-    int b = 2;
-    int *q = &b;
-    free(q);
-    *q = 3;
-    printf("%d\n", *q);
+    printf("%p\n", p);
+    printf("%d\n", p->a);
+    printf("%d\n", p->b);
+    p->a = 3;
+    p->b = 4;
     return 0;
 }
 
