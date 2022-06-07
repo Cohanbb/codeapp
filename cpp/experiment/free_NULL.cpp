@@ -2,15 +2,17 @@
 #include <malloc.h>
 
 int main() {
-    int *p = (int *)malloc(sizeof(int) * 2);
-    p[0] = 1;
-    p[1] = 2;
-    printf("%d\n", *p);
-    printf("%d\n", p[1]);
+    int a = 1;
+    int *p = (int *)malloc(sizeof(int));
+    *p = 1;
     free(p);
-    //p = NULL;
+    *p = 3;
     printf("%d\n", *p);
-    printf("%d\n", p[1]);
+    int b = 2;
+    int *q = &b;
+    free(q);
+    *q = 3;
+    printf("%d\n", *q);
     return 0;
 }
 
