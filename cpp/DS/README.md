@@ -18,9 +18,9 @@
 
 ### Queue 队列
 
-[Sequential Queue ｜ 队列「顺序结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue_array.cpp)
+[Sequential Queue ｜ 队列「顺序结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqQueue.cpp)
 
-[Link Queue ｜ 队列「链式结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue_linklist.cpp)
+[Link Queue ｜ 队列「链式结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/LinkQueue.cpp)
 
 ## Tree 树
 
