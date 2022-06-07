@@ -12,15 +12,15 @@
 
 ### Stack 栈
 
-[Stack Using Array ｜ 栈「数组实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Stack_array.cpp)
+[Sequential Stack ｜ 栈「顺序结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/SeqStack.cpp)
 
-[Stack Using Link List ｜ 栈「链表实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Stack_linklist.cpp)
+[Link Stack ｜ 栈「链式结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/LinkStack.cpp)
 
 ### Queue 队列
 
-[Queue Using Array ｜ 队列「数组实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue_array.cpp)
+[Sequential Queue ｜ 队列「顺序结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue_array.cpp)
 
-[Queue Using Link List ｜ 队列「链表实现」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue_linklist.cpp)
+[Link Queue ｜ 队列「链式结构」](https://github.com/Cohanbb/mycode/blob/main/cpp/DS/Queue_linklist.cpp)
 
 ## Tree 树
 

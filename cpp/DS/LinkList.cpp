@@ -81,6 +81,16 @@ void PrintList(linklist L) {
     }
 }
 
+void DestroyList(linklist &L) {
+    lnode *q, *p = L->next;
+    while (p) {
+        q = p->next;
+        free(p);
+        p = q;
+    }
+    free(L);
+}
+
 int main() {
     linklist list;
     int e;
