@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <malloc.h>
 
-typedef Queue {
+#define Initsize 20
 
-} queue;
+typedef struct Queue {
+    int *data;
+    int top, bottom, maxsize;
+} sqqueue;
 
