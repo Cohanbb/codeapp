@@ -1,10 +1,10 @@
 /*使用数组实现的顺序栈*/
 #include <stdio.h>
-#define Maxsize 20;
+#define Initsize 20;
 
 typedef struct SeqStack {
-    int data[Maxsize];
-    int top;
+    int *data;
+    int top, maxsize;
 } sqstack;
 
 void InitStack(sqstack &S) {
