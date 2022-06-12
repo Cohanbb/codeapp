@@ -12,6 +12,7 @@ typedef struct LinkQueue {
     lnode *rear;
 } linkqueue;
 
+/*Initialize Link Queue 初始化链式结构队列*/
 void InitQueue(linkqueue &Q) {
     Q.front = Q.rear = (lnode *)malloc(sizeof(lnode));
     Q.front->next = NULL;
@@ -21,6 +22,7 @@ bool Empty(linkqueue Q) {
     return Q.front == Q.rear;
 }
 
+/*Elements Enter Queue 元素入队*/
 void EnterQueue(linkqueue &Q, int e) {
     lnode *s = (lnode *)malloc(sizeof(lnode));
     s->data = e;
@@ -29,6 +31,7 @@ void EnterQueue(linkqueue &Q, int e) {
     Q.rear = s;
 }
 
+/*Element Exit Queue 元素出队*/
 void ExitQueue(linkqueue &Q, int &e) {
     if (Empty(Q)) {
         printf("Empty Queue!\n");
@@ -42,10 +45,12 @@ void ExitQueue(linkqueue &Q, int &e) {
     free(p); //释放该结点内存
 }
 
+/*Print Link Queue 打印链式结构队列*/
 void PrintQueue(linkqueue Q) {
 
 }
 
+/*Destroy Link Queue 销毁链式结构队列*/
 void DestroyQueue(linkqueue &Q) {
 
 }

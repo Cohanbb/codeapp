@@ -22,7 +22,7 @@ bool Empty(sqqueue Q) {
     return Q.rear == Q.front;
 }
 
-/*Extend Size of Sequential Queue 扩充顺序结构队列的容量*/
+/*Extend Size of Queue 扩充循环队列的容量*/
 void ExtendQueue(sqqueue &Q, int n) {
     int *p = Q.data; //p 指向原地址
     int i, j;
