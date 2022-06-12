@@ -1,3 +1,4 @@
+/*使用静态数组实现的顺序表*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -16,9 +17,7 @@ void InitList(sqlist &L) {
 }
 
 bool Empty(sqlist L) {
-    if (L.length == 0)
-        return true;
-    return false;
+    return L.length == 0;
 }
 
 /*Insert element 插入元素*/
@@ -28,7 +27,7 @@ void InsertElem(sqlist &L, int i, int e) {
         return;
     }
     if (L.length == Maxsize) {
-        printf("Oversize!");
+        printf("Oversize!\n");
         return;
     }
     for (int j = L.length; j >= i; j--)
@@ -50,7 +49,7 @@ void DeleteElem(sqlist &L, int i, int &e) {
     L.length--;
 }
 
-/*Search element with value 按值查找*/
+/*Search Element by Value 按值查找*/
 void LocateElem(sqlist L, int &i, int e) {
     for (int j = 0; j < L.length; j++) {
         if (L.data[j] == e) {
@@ -63,27 +62,23 @@ void LocateElem(sqlist L, int &i, int e) {
 
 /*Print Sequential List 打印顺序表*/
 void PrintList(sqlist L) {
+    if (Empty(L)) {
+        printf("Empty List!\n");
+        return;
+    }
     for (int i = 0; i < L.length; i++)
         printf("%d\n", L.data[i]);
 }
 
-void DestroyList(sqlist *L) {
-    if (L == NULL)
-        return;
-    free(L);
-    L = NULL;
-}
-
 int main() {
-   sqlist list;
-   int e, i;
-   InitList(list);
-   InsertElem(list, 1, 1); //insert 1 at the first position
-   InsertElem(list, 2, 3); //insert 3 at the second position
-   DeleteElem(list, 1, e); //delete content at the first position
-   PrintList(list);
-   printf("%d \n", e);
-   LocateElem(list, i, 1);
-   DestroyList(&list);
-   return 0;
+    sqlist list;
+    int i, e;
+    InitList(list);
+    InsertElem(list, 1, 1); //insert 1 at the first position
+    InsertElem(list, 2, 3); //insert 3 at the second position
+    DeleteElem(list, 1, e); //delete content at the first position
+    PrintList(list);
+    printf("%d\n", e);
+    LocateElem(list, i, 1);
+    return 0;
 }

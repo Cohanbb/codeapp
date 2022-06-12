@@ -9,7 +9,7 @@
  *现在情况发生了变化，指针（或引用）是函数的参数，我们设法使函数更改指针的值，换句话说，我们希望函数可以更改指针的指向。
  *如何做到这一点？
  *下面的代码包括两个函数 test1 和 test2，test1 使用指针作为参数，test2 使用指针的指针作为参数。
-*/
+ */
 
 #include <stdio.h>
 
@@ -35,5 +35,5 @@ int main() {
 /*
  *As a result, function test1 print 'a' and function test2 print 'b', so function test2 changes the value of the pointer.
  *结果，函数 test1 打印 “a”，函数 test2 打印“b”，因此函数 test2 更改了指针的指向。
-*/
+ */
  
