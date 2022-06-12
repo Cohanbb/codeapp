@@ -1,4 +1,3 @@
-/*使用指针实现链栈*/
 #include <stdio.h>
 #include <malloc.h>
 

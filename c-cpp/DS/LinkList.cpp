@@ -53,7 +53,7 @@ void InsertElem(linklist &L, int i, int e) {
 void DeleteElem(linklist &L, int i, int &e) {
     lnode *p = GetElem(L, i - 1);
     if (!p) {
-        printf("Invalid Position!");
+        printf("Invalid Position!\n");
         return;
     }
     e = p->next->data;
@@ -74,6 +74,10 @@ lnode *LocateElem(linklist L, int e) {
 
 /*Print Link List 打印链表*/
 void PrintList(linklist L) {
+    if (Empty(L)) {
+        printf("Empty List!\n");
+        return;
+    }
     lnode *p = L->next;
     while (p) {
         printf("%d\n", p->data);

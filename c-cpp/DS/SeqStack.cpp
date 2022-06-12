@@ -1,4 +1,4 @@
-/*使用数组实现的顺序栈*/
+/*使用动态数组实现的顺序栈*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -41,7 +41,7 @@ void Push(sqstack &S, int e) {
 /*Pop Element 元素出栈*/
 void Pop(sqstack &S, int &e) {
     if (Empty(S)) {
-        printf("Empty Stack!");
+        printf("Empty Stack!\n");
         return;
     }
     e = S.data[S.top--];
@@ -50,7 +50,7 @@ void Pop(sqstack &S, int &e) {
 /*Print Sequential Stack 打印顺序栈*/
 void PrintStack(sqstack S) {
     if (Empty(S)) {
-        printf("Empty Stack!");
+        printf("Empty Stack!\n");
         return;
     }
     for (int i = 0; i <= S.top; i++)
@@ -66,8 +66,8 @@ void DestroyStack(sqstack *S) {
 }
 
 int main() {
-    int e;
     sqstack stack;
+    int e;
     InitStack(stack);
     Push(stack, 1);
     Pop(stack, e);

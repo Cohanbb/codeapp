@@ -1,3 +1,4 @@
+/*使用动态数组实现循环队列*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -17,13 +18,19 @@ void InitQueue(sqqueue &Q) {
 }
 
 bool Empty(sqqueue Q) {
-    if (Q.rear = Q.front) 
+    if (Q.rear == Q.front) 
         return true;
     return false;
 }
 
 void ExtendQueue(sqqueue &Q, int n) {
-    
+    int *p = Q.data;
+    int i, j;
+    j = Q.maxsize;
+    Q.maxsize += n;
+    Q.data = (int *)malloc(sizeof(int) * Q.maxsize);
+    for (i = 0; i < (Q.rear + j - Q.front) % j; i++)
+        Q.data[i] = p[(Q.front + i) % j];
 }
 
 void EnQueue(sqqueue &Q, int e) {
@@ -34,8 +41,8 @@ void EnQueue(sqqueue &Q, int e) {
 }
 
 void DeQueue(sqqueue &Q, int &e) {
-    if (Q.rear == Q.front) {
-        printf("Empty Queue!");
+    if (Empty(Q)) {
+        printf("Empty Queue!\n");
         return;
     }
     e = Q.data[Q.front];
@@ -43,7 +50,12 @@ void DeQueue(sqqueue &Q, int &e) {
 }
 
 void PrintQueue(sqqueue Q) {
-    
+    if (Empty(Q)) {
+        printf("Empty Queue!\n");
+        return;
+    }
+    for (int i = 0; i < (Q.rear + Q.maxsize - Q.front) % Q.maxsize; i++)
+        printf("%d\n", Q.data[(Q.front + i) % Q.maxsize]);
 }
 
 void DestroyQueue(sqqueue *Q) {
@@ -54,5 +66,13 @@ void DestroyQueue(sqqueue *Q) {
 }
 
 int main() {
-
+    sqqueue queue;
+    int e;
+    InitQueue(queue);
+    EnQueue(queue, 1);
+    DeQueue(queue, e);
+    EnQueue(queue, 2);
+    PrintQueue(queue);
+    DestroyQueue(&queue);
+    return 0;
 }

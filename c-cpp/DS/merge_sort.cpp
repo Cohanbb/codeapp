@@ -2,6 +2,7 @@
 #include <string.h>
 #include <malloc.h>
 
+/*非递归实现归并排序*/
 void merge_sort(int a[], int n) {
     int len1, len2, i, j, k;
     int *t;

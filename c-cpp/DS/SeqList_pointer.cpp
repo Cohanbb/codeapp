@@ -1,3 +1,4 @@
+/*使用动态数组实现顺序表*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -32,7 +33,7 @@ void ExtendList(sqlist &L, int n) {
 
 void InsertElem(sqlist &L, int i, int e) {
     if (i <= 0 || i > L.length + 1) {
-        printf("Invalid Position!");
+        printf("Invalid Position!\n");
         return;
     }
     if (L.length == L.maxsize)
@@ -45,7 +46,7 @@ void InsertElem(sqlist &L, int i, int e) {
 
 void DeleteElem(sqlist &L, int i, int &e) {
     if (i <= 0 || i > L.length) {
-        printf("Invalid Position!");
+        printf("Invalid Position!\n");
         return;
     }
     e = *(L.data + i - 1);
@@ -66,6 +67,10 @@ void LocateElem(sqlist L, int &i, int e) {
 }
 
 void PrintList(sqlist L) {
+    if (Empty(L)) {
+        printf("Empty List!\n");
+        return;
+    }
     for (int i = 0; i < L.length; i++)
         printf("%d\n", *(L.data + i));
 }
@@ -80,8 +85,8 @@ void DestroyList(sqlist *L) {
 }
 
 int main() {
-    int i, e;
     sqlist list;
+    int i, e;
     InitList(list);
     InsertElem(list, 1, 2);
     InsertElem(list, 2, 3);
