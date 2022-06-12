@@ -20,7 +20,7 @@ bool Empty(linklist L) {
     return L->next == NULL;
 }
 
-/*Search element with position 按位查找*/
+/*Search Element by Position 按位查找*/
 lnode *GetElem(linklist L, int i) {
     if (i < 0) {
         printf("Invalid Position!\n");
@@ -43,7 +43,7 @@ void InsertElem(linklist &L, int i, int e) {
         printf("Invalid Position!\n");
         return;
     }
-    lnode *s = (lnode *)malloc(sizeof(lnode));
+    lnode *s = (lnode *)malloc(sizeof(lnode)); //开辟新的结点
     s->data = e;
     s->next = p->next;
     p->next = s;
@@ -56,14 +56,13 @@ void DeleteElem(linklist &L, int i, int &e) {
         printf("Invalid Position!\n");
         return;
     }
-    int *q = p->next;
+    lnode *q = p->next; //q 指向要删除的结点
     e = q->data;
     p->next = q->next;
-    free(q);
-    q = NULL;
+    free(q); //释放该结点内存
 }
 
-/*Search element with value 按值查找*/
+/*Search Element by Value 按值查找*/
 lnode *LocateElem(linklist L, int e) {
     lnode *p = L->next;
     while (p) {
@@ -94,8 +93,7 @@ void DestroyList(linklist &L) {
     while (L) {
         p = L;
         L = L->next;
-        free(p);
-        p = NULL;
+        free(p); //释放该结点内存 
     }
 }
 
@@ -109,5 +107,6 @@ int main() {
     DeleteElem(list, 2, e);
     PrintList(list);
     printf("Delete element is %d\n", e);
+    DestroyList(list);
     return 0;
 }

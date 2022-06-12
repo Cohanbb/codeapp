@@ -49,7 +49,7 @@ void DeleteElem(sqlist &L, int i, int &e) {
     L.length--;
 }
 
-/*Search element with value 按值查找*/
+/*Search Element by Value 按值查找*/
 void LocateElem(sqlist L, int &i, int e) {
     for (int j = 0; j < L.length; j++) {
         if (L.data[j] == e) {
@@ -70,23 +70,15 @@ void PrintList(sqlist L) {
         printf("%d\n", L.data[i]);
 }
 
-void DestroyList(sqlist *L) {
-    if (L == NULL)
-        return;
-    free(L);
-    L = NULL;
-}
-
 int main() {
-   sqlist list;
-   int i, e;
-   InitList(list);
-   InsertElem(list, 1, 1); //insert 1 at the first position
-   InsertElem(list, 2, 3); //insert 3 at the second position
-   DeleteElem(list, 1, e); //delete content at the first position
-   PrintList(list);
-   printf("%d\n", e);
-   LocateElem(list, i, 1);
-   DestroyList(&list);
-   return 0;
+    sqlist list;
+    int i, e;
+    InitList(list);
+    InsertElem(list, 1, 1); //insert 1 at the first position
+    InsertElem(list, 2, 3); //insert 3 at the second position
+    DeleteElem(list, 1, e); //delete content at the first position
+    PrintList(list);
+    printf("%d\n", e);
+    LocateElem(list, i, 1);
+    return 0;
 }

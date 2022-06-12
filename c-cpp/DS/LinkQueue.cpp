@@ -34,13 +34,12 @@ void ExitQueue(linkqueue &Q, int &e) {
         printf("Empty Queue!\n");
         return;
     }
-    lnode *p = Q.front->next;
+    lnode *p = Q.front->next; //p 指向要删除的结点
     e = Q.front->data;
     Q.front->next = p->next;
-    if (Q.rear == p)
+    if (p ==  Q.rear) //若 p 等于尾结点，则队列置空
         Q.rear = Q.front;
-    free(p);
-    p = NULL;
+    free(p); //释放该结点内存
 }
 
 void PrintQueue(linkqueue Q) {

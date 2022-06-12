@@ -22,12 +22,13 @@ bool Empty(sqstack S) {
 
 /*Extend Size of Stack 扩充栈容量*/
 void ExtendStack(sqstack &S, int n) {
-    int *p = S.data;
-    S.maxsize += n;
-    S.data = (int *)malloc(sizeof(int) * S.maxsize);
+    int *p = S.data; //p 指向原地址
+    S.maxsize += n; //扩容
+    S.data = (int *)malloc(sizeof(int) * S.maxsize); //开辟新地址
     for (int i = 0; i <= S.top; i++)
         S.data[i] = p[i];
-    free(p);
+    free(p); //释放原地址
+    p = NULL; //p 置空
 }
 
 /*Push Element 元素入栈*/
@@ -58,10 +59,12 @@ void PrintStack(sqstack S) {
 
 /*Destroy Sequential Stack 销毁顺序结构栈*/
 void DestroyStack(sqstack *S) {
-    free(S->data);
-    S->data = NULL;
-    free(S);
-    S = NULL;
+    if (!S)
+        return;
+    free(S->data); //释放数组内存
+    S->data = NULL; //指针置空
+    S->top = -1;
+    S->maxsize = 0;
 }
 
 int main() {
