@@ -17,9 +17,7 @@ void InitStack(sqstack &S) {
 }
 
 bool Empty(sqstack S) {
-    if (S.top == -1)
-        return true;
-    return false;
+    return S.top == -1;
 }
 
 /*Extend Size of Stack 扩充栈容量*/
@@ -29,6 +27,7 @@ void ExtendStack(sqstack &S, int n) {
     S.data = (int *)malloc(sizeof(int) * S.maxsize);
     for (int i = 0; i <= S.top; i++)
         S.data[i] = p[i];
+    free(p);
 }
 
 /*Push Element 元素入栈*/

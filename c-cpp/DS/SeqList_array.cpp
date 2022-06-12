@@ -1,4 +1,4 @@
-/*使用静态数组实现顺序表*/
+/*使用静态数组实现的顺序表*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -17,9 +17,7 @@ void InitList(sqlist &L) {
 }
 
 bool Empty(sqlist L) {
-    if (L.length == 0)
-        return true;
-    return false;
+    return L.length == 0;
 }
 
 /*Insert element 插入元素*/

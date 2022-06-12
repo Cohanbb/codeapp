@@ -1,32 +1,33 @@
+/*链式结构的栈*/
 #include <stdio.h>
 #include <malloc.h>
 
-typedef struct SeqStack {
-    int *data;
-    int top;
-} sqstack;
+typedef struct LNode {
+    int data;
+    struct LNode *next; 
+} LNode, *linkstack;
 
-void InitStack(sqstack &S) {
-
-}
-
-void Empty(sqstack S) {
+void InitStack(linkstack &S) {
 
 }
 
-void Push(sqstack &S, int e) {
+bool Empty(linkstack S) {
+    return S.top == -1;
+}
+
+void Push(linkstack &S, int e) {
 
 }
 
-void Pop(sqstack &S, int &e) {
+void Pop(linkstack &S, int &e) {
 
 }
 
-void PrintStack(sqstack S) {
+void PrintStack(linkstack S) {
 
 }
 
-void Destroy(sqstack *S) {
+void DestroyStack(linkstack &S) {
 
 }
 

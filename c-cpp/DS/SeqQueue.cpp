@@ -1,4 +1,4 @@
-/*使用动态数组实现循环队列*/
+/*使用动态数组实现的循环队列*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -19,9 +19,7 @@ void InitQueue(sqqueue &Q) {
 }
 
 bool Empty(sqqueue Q) {
-    if (Q.rear == Q.front) 
-        return true;
-    return false;
+    return Q.rear == Q.front;
 }
 
 /*Extend Size of Sequential Queue 扩充顺序结构队列的容量*/

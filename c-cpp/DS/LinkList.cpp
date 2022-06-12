@@ -56,8 +56,11 @@ void DeleteElem(linklist &L, int i, int &e) {
         printf("Invalid Position!\n");
         return;
     }
-    e = p->next->data;
-    p->next = p->next->next;
+    int *q = p->next;
+    e = q->data;
+    p->next = q->next;
+    free(q);
+    q = NULL;
 }
 
 /*Search element with value 按值查找*/
