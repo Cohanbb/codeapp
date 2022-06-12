@@ -1,4 +1,4 @@
-/*使用动态数组实现的顺序栈*/
+/*使用动态数组实现的顺序结构栈*/
 #include <stdio.h>
 #include <malloc.h>
 
@@ -9,7 +9,7 @@ typedef struct SeqStack {
     int top, maxsize;
 } sqstack;
 
-/*Initialize Sequential Stack 初始化顺序栈*/
+/*Initialize Sequential Stack 初始化顺序结构栈*/
 void InitStack(sqstack &S) {
     S.maxsize = Initsize;
     S.data = (int *)malloc(sizeof(int) * S.maxsize);
@@ -47,7 +47,7 @@ void Pop(sqstack &S, int &e) {
     e = S.data[S.top--];
 }
 
-/*Print Sequential Stack 打印顺序栈*/
+/*Print Sequential Stack 打印顺序结构栈*/
 void PrintStack(sqstack S) {
     if (Empty(S)) {
         printf("Empty Stack!\n");
@@ -57,7 +57,7 @@ void PrintStack(sqstack S) {
         printf("%d\n", S.data[i]);
 }
 
-/*Destroy Sequential Stack 销毁顺序栈*/
+/*Destroy Sequential Stack 销毁顺序结构栈*/
 void DestroyStack(sqstack *S) {
     free(S->data);
     S->data = NULL;

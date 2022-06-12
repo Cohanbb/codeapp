@@ -4,11 +4,12 @@
 
 #define Initsize 20 //Initial Size 初始容量
 
-typedef struct Queue {
+typedef struct SeqQueue {
     int *data;
     int front, rear, maxsize;
 } sqqueue;
 
+/*Initialize Sequential Queue 初始化顺序结构循环队列*/
 void InitQueue(sqqueue &Q) {
     Q.maxsize = Initsize;
     Q.data = (int *)malloc(sizeof(int) * Q.maxsize);
@@ -23,6 +24,7 @@ bool Empty(sqqueue Q) {
     return false;
 }
 
+/*Extend Size of Sequential Queue 扩充顺序结构队列的容量*/
 void ExtendQueue(sqqueue &Q, int n) {
     int *p = Q.data;
     int i, j;
@@ -33,14 +35,16 @@ void ExtendQueue(sqqueue &Q, int n) {
         Q.data[i] = p[(Q.front + i) % j];
 }
 
-void EnQueue(sqqueue &Q, int e) {
+/*Element Enter Queue 元素进入队列*/
+void EnterQueue(sqqueue &Q, int e) {
     if ((Q.rear + 1) % Q.maxsize == Q.front)
         ExtendQueue(Q, 1);
     Q.data[Q.rear] = e;
     Q.rear = (Q.rear + 1) % Q.maxsize;
 }
 
-void DeQueue(sqqueue &Q, int &e) {
+/*Element Exit Queue 元素退出队列*/
+void ExitQueue(sqqueue &Q, int &e) {
     if (Empty(Q)) {
         printf("Empty Queue!\n");
         return;
@@ -49,6 +53,7 @@ void DeQueue(sqqueue &Q, int &e) {
     Q.front = (Q.front + 1) % Q.maxsize;
 }
 
+/*Print Sequential Queue 打印顺序结构循环队列*/
 void PrintQueue(sqqueue Q) {
     if (Empty(Q)) {
         printf("Empty Queue!\n");
@@ -58,6 +63,7 @@ void PrintQueue(sqqueue Q) {
         printf("%d\n", Q.data[(Q.front + i) % Q.maxsize]);
 }
 
+/*Destroy Sequential Queue 销毁顺序结构循环队列*/
 void DestroyQueue(sqqueue *Q) {
     free(Q->data);
     Q->data = NULL;
@@ -69,9 +75,9 @@ int main() {
     sqqueue queue;
     int e;
     InitQueue(queue);
-    EnQueue(queue, 1);
-    DeQueue(queue, e);
-    EnQueue(queue, 2);
+    EnterQueue(queue, 1);
+    ExitQueue(queue, e);
+    EnterQueue(queue, 2);
     PrintQueue(queue);
     DestroyQueue(&queue);
     return 0;
