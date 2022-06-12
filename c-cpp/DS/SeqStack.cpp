@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include <malloc.h>
 
-#define Initsize 20;
+#define Initsize 20 //Initial Size 初始容量
 
 typedef struct SeqStack {
     int *data;
     int top, maxsize;
 } sqstack;
 
+/*Initialize Sequential Stack 初始化顺序栈*/
 void InitStack(sqstack &S) {
     S.maxsize = Initsize;
     S.data = (int *)malloc(sizeof(int) * S.maxsize);
@@ -21,6 +22,7 @@ bool Empty(sqstack S) {
     return false;
 }
 
+/*Extend Size of Stack 扩充栈容量*/
 void ExtendStack(sqstack &S, int n) {
     int *p = S.data;
     S.maxsize += n;
@@ -29,12 +31,14 @@ void ExtendStack(sqstack &S, int n) {
         S.data[i] = p[i];
 }
 
+/*Push Element 元素入栈*/
 void Push(sqstack &S, int e) {
     if (S.top + 1 == S.maxsize)
         ExtendStack(S, 1);
     S.data[++S.top] = e;
 }
 
+/*Pop Element 元素出栈*/
 void Pop(sqstack &S, int &e) {
     if (Empty(S)) {
         printf("Empty Stack!");
@@ -43,6 +47,7 @@ void Pop(sqstack &S, int &e) {
     e = S.data[S.top--];
 }
 
+/*Print Sequential Stack 打印顺序栈*/
 void PrintStack(sqstack S) {
     if (Empty(S)) {
         printf("Empty Stack!");
@@ -52,7 +57,8 @@ void PrintStack(sqstack S) {
         printf("%d\n", S.data[i]);
 }
 
-void Destroy(sqstack *S) {
+/*Destroy Sequential Stack 销毁顺序栈*/
+void DestroyStack(sqstack *S) {
     free(S->data);
     S->data = NULL;
     free(S);
@@ -60,5 +66,13 @@ void Destroy(sqstack *S) {
 }
 
 int main() {
-    
+    int e;
+    sqstack stack;
+    InitStack(stack);
+    Push(stack, 1);
+    Pop(stack, e);
+    Push(stack, 2);
+    PrintStack(stack);
+    DestroyStack(&stack);
+    return 0;
 }
