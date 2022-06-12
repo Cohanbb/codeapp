@@ -15,7 +15,7 @@ It contains the code implementation of
 * Search  
 * Sort  
 
-using c++ as the programming language.
+using C++ as the programming language.
 
 Continuously updating.
 
@@ -32,6 +32,6 @@ Continuously updating.
 * 查找
 * 排序
 
-代码实现，使用 C++ 作为编程语言。
+的代码实现，使用 C++ 作为编程语言。
 
 持续更新中。
