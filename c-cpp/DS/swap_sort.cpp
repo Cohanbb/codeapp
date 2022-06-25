@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*Bubble Sort 冒泡排序*/
+/* Bubble Sort 冒泡排序 */
 void bubble_sort(int a[], int n) {
     for (int i = 0; i < n - 1; i++) {
         int flag = 0; //set initial flag = 0
@@ -9,14 +9,14 @@ void bubble_sort(int a[], int n) {
                 int tp = a[j - 1];
                 a[j - 1] = a[j];
                 a[j] = tp;
-                flag = 1; //set flag = 1 while swapping
+                flag = 1; // set flag = 1 while swapping
             }
-        if (flag == 0) //flag = 0 for no swapping happened
+        if (flag == 0) // flag = 0 for no swapping happened
             return;
    }
 }
 
-/*Quick Sort 快速排序*/
+/* Quick Sort 快速排序 */
 void quick_sort(int a[], int low, int high) {
     if (low > high) 
         return;

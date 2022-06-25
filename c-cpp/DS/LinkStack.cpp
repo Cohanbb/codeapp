@@ -1,13 +1,13 @@
-/*链式结构的栈（带头结点）*/
+/* 链式结构的栈（带头结点） */
 #include <stdio.h>
 #include <malloc.h>
 
 typedef struct LNode {
     int data;
     struct LNode *next; 
-} LNode, *linkstack;
+} lnode, *linkstack;
 
-/*Initialize Link Stack 初始化链式结构栈*/
+/* Initialize Link Stack 初始化链式结构栈 */
 void InitStack(linkstack &S) {
     S = (lnode *)malloc(sizeof(lnode));
     if (S == NULL) {
@@ -22,7 +22,7 @@ bool Empty(linkstack S) {
 }
 
 void Push(linkstack &S, int e) {
-    lnode *p = (lnode *)malloc(sizeof(lnode)); //开辟新结点作为栈顶
+    lnode *p = (lnode *)malloc(sizeof(lnode)); // 开辟新结点作为栈顶
     p->data = e;
     p->next = S->next;
     S->next = p->next;
@@ -33,13 +33,13 @@ void Pop(linkstack &S, int &e) {
         printf("Empty Stack!\n");
         return;
     }
-    lnode *p = S->next; //p 指向栈顶
+    lnode *p = S->next; // p 指向栈顶
     e = p->data;
     S->next = p->next;
-    free(p); //释放该结点内存
+    free(p); // 释放该结点内存
 }
 
-/*Print Link Stack 打印链式结构栈*/
+/* Print Link Stack 打印链式结构栈 */
 void PrintStack(linkstack S) {
     if (Empty(S)) {
         printf("Empty List!\n");
@@ -52,13 +52,13 @@ void PrintStack(linkstack S) {
     }
 }
 
-/*Destroy Link Stack 销毁链式结构栈*/
+/* Destroy Link Stack 销毁链式结构栈 */
 void DestroyStack(linkstack &S) {
     lnode *p;
     while (S) {
         p = S;
         S = S->next;
-        free(p); //释放该结点内存 
+        free(p); // 释放该结点内存 
     }
 }
 

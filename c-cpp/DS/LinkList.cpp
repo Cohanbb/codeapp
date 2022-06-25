@@ -6,7 +6,7 @@ typedef struct LNode {
     struct LNode *next;
 } lnode, *linklist;
 
-/*Initialize Link List 初始化链表*/
+/* Initialize Link List 初始化链表 */
 void InitList(linklist &L) {
     L = (lnode *)malloc(sizeof(lnode));
     if (L == NULL) {
@@ -20,7 +20,7 @@ bool Empty(linklist L) {
     return L->next == NULL;
 }
 
-/*Search Element by Position 按位查找*/
+/* Search Element by Position 按位查找 */
 lnode *GetElem(linklist L, int i) {
     if (i < 0) {
         printf("Invalid Position!\n");
@@ -36,33 +36,33 @@ lnode *GetElem(linklist L, int i) {
     return p;
 }
 
-/*Insert node 插入节点*/
+/* Insert node 插入节点 */
 void InsertElem(linklist &L, int i, int e) {
     lnode *p = GetElem(L, i - 1);
     if (!p) {
         printf("Invalid Position!\n");
         return;
     }
-    lnode *s = (lnode *)malloc(sizeof(lnode)); //开辟新的结点
+    lnode *s = (lnode *)malloc(sizeof(lnode)); // 开辟新的结点
     s->data = e;
     s->next = p->next;
     p->next = s;
 }
 
-/*Delete node 删除节点*/
+/* Delete node 删除节点 */
 void DeleteElem(linklist &L, int i, int &e) {
     lnode *p = GetElem(L, i - 1);
     if (!p) {
         printf("Invalid Position!\n");
         return;
     }
-    lnode *q = p->next; //q 指向要删除的结点
+    lnode *q = p->next; // q 指向要删除的结点
     e = q->data;
     p->next = q->next;
-    free(q); //释放该结点内存
+    free(q); // 释放该结点内存
 }
 
-/*Search Element by Value 按值查找*/
+/* Search Element by Value 按值查找 */
 lnode *LocateElem(linklist L, int e) {
     lnode *p = L->next;
     while (p) {
@@ -74,7 +74,7 @@ lnode *LocateElem(linklist L, int e) {
     return NULL;
 }
 
-/*Print Link List 打印链表*/
+/* Print Link List 打印链表 */
 void PrintList(linklist L) {
     if (Empty(L)) {
         printf("Empty List!\n");
@@ -87,13 +87,13 @@ void PrintList(linklist L) {
     }
 }
 
-/*Destroy Link List 销毁链表 */
+/* Destroy Link List 销毁链表 */
 void DestroyList(linklist &L) {
     lnode *p;
     while (L) {
         p = L;
         L = L->next;
-        free(p); //释放该结点内存 
+        free(p); // 释放该结点内存 
     }
 }
 

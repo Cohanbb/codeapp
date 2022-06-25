@@ -1,4 +1,4 @@
-/*使用静态数组实现的顺序表*/
+/* 使用静态数组实现的顺序表 */
 #include <stdio.h>
 #include <malloc.h>
 
@@ -9,7 +9,7 @@ typedef struct SeqList {
     int data[Maxsize];
 } sqlist;
 
-/*Initialize Sequential List 初始化顺序表*/
+/* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlist &L) {
     for (int i = 0; i < Maxsize; i++)
         L.data[i] = 0;
@@ -20,7 +20,7 @@ bool Empty(sqlist L) {
     return L.length == 0;
 }
 
-/*Insert element 插入元素*/
+/* Insert element 插入元素 */
 void InsertElem(sqlist &L, int i, int e) {
     if (i <= 0 || i > L.length + 1) {
         printf("Invalid Position!\n");
@@ -36,7 +36,7 @@ void InsertElem(sqlist &L, int i, int e) {
     L.length++;
 }
 
-/*Delete element 删除元素*/
+/* Delete element 删除元素 */
 void DeleteElem(sqlist &L, int i, int &e) {
     if (i <= 0 || i > L.length) {
         printf("Invalid Position!");
@@ -49,7 +49,7 @@ void DeleteElem(sqlist &L, int i, int &e) {
     L.length--;
 }
 
-/*Search Element by Value 按值查找*/
+/* Search Element by Value 按值查找 */
 void LocateElem(sqlist L, int &i, int e) {
     for (int j = 0; j < L.length; j++) {
         if (L.data[j] == e) {
@@ -60,7 +60,7 @@ void LocateElem(sqlist L, int &i, int e) {
     printf("Not Found!\n");
 }
 
-/*Print Sequential List 打印顺序表*/
+/* Print Sequential List 打印顺序表 */
 void PrintList(sqlist L) {
     if (Empty(L)) {
         printf("Empty List!\n");
@@ -74,9 +74,9 @@ int main() {
     sqlist list;
     int i, e;
     InitList(list);
-    InsertElem(list, 1, 1); //insert 1 at the first position
-    InsertElem(list, 2, 3); //insert 3 at the second position
-    DeleteElem(list, 1, e); //delete content at the first position
+    InsertElem(list, 1, 1); // insert 1 at the first position
+    InsertElem(list, 2, 3); // insert 3 at the second position
+    DeleteElem(list, 1, e); // delete content at the first position
     PrintList(list);
     printf("%d\n", e);
     LocateElem(list, i, 1);
