@@ -4,7 +4,7 @@ Mycode for learning and experimentation.
 
 ## Data Structure 数据结构
 
-[Data Structure](https://github.com/Cohanbb/mycode/blob/main/c-cpp/DS/)
+[Data Structure](https://github.com/Cohanbb/mycode/blob/main/c/DS/)
 
 It contains the code implementation of 
 
@@ -21,7 +21,7 @@ Continuously updating.
 
 <hr>
 
-[数据结构](https://github.com/Cohanbb/mycode/blob/main/c-cpp/DS/)
+[数据结构](https://github.com/Cohanbb/mycode/blob/main/c/DS/)
 
 包含
 

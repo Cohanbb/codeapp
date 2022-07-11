@@ -31,9 +31,8 @@ int main() {
     return 0;
 }
 
-
 /*
  * As a result, function test1 print 'a' and function test2 print 'b', so function test2 changes the value of the pointer.
- * 结果，函数 test1 打印 “a”，函数 test2 打印“b”，因此函数 test2 更改了指针的指向。
+ * 结果，函数 test1 打印“a”，函数 test2 打印“b”，因此函数 test2 更改了指针的指向。
  */
  
