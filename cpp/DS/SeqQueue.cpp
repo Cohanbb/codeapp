@@ -1,6 +1,6 @@
 /* 使用动态数组实现的循环队列 */
-#include <stdio.h>
-#include <malloc.h>
+#include <cstdio>
+#include <cstdlib>
 
 #define Initsize 20 // Initial Size 初始容量
 

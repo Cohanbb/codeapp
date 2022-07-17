@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 
 /* Bubble Sort 冒泡排序 */
 void bubble_sort(int a[], int n) {

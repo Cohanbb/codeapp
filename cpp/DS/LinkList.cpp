@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <malloc.h>
+#include <cstdio>
+#include <cstdlib>
 
 typedef struct LNode {
     int data;

@@ -1,6 +1,6 @@
 /* 链式结构的队列 */
-#include <stdio.h>
-#include <malloc.h>
+#include <cstdio>
+#include <cstdlib>
 
 typedef struct LNode {
     int data;

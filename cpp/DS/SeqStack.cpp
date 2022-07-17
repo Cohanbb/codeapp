@@ -1,6 +1,6 @@
 /* 使用动态数组实现的顺序结构栈 */
-#include <stdio.h>
-#include <malloc.h>
+#include <cstdio>
+#include <cstdlib>
 
 #define Initsize 20 // Initial Size 初始容量
 

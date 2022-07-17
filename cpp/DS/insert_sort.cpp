@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 
 /* Insert Sort 直接插入排序 */
 void insert_sort(int a[], int n) {

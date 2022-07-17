@@ -1,6 +1,6 @@
 /* 链式结构的栈（带头结点） */
-#include <stdio.h>
-#include <malloc.h>
+#include <cstdio>
+#include <cstdlib>
 
 typedef struct LNode {
     int data;
