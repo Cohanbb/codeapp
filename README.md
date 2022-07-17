@@ -4,7 +4,7 @@ Mycode for learning and experimentation.
 
 ## Data Structure 数据结构
 
-[Data Structure](https://github.com/Cohanbb/mycode/blob/main/c/DS/)
+[Data Structure](c/DS/README.md)
 
 It contains the code implementation of 
 
@@ -15,13 +15,13 @@ It contains the code implementation of
 * Search  
 * Sort  
 
-using C++ as the programming language.
+using C as the programming language.
 
 Continuously updating.
 
 <hr>
 
-[数据结构](https://github.com/Cohanbb/mycode/blob/main/c/DS/)
+[数据结构](c/DS/README.md)
 
 包含
 
@@ -32,6 +32,6 @@ Continuously updating.
 * 查找
 * 排序
 
-的代码实现，使用 C++ 作为编程语言。
+的代码实现，使用 C 作为编程语言。
 
 持续更新中。

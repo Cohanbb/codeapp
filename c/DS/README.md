@@ -2,25 +2,25 @@
 
 ## Linear List 线性表
 
-[Sequential List Using Array ｜ 顺序表「数组实现」](https://github.com/Cohanbb/mycode/blob/main/c/DS/SeqList_array.c)
+[Sequential List Using Array ｜ 顺序表「数组实现」](SeqList_array.c)
 
-[Sequential List Using Pointer ｜ 顺序表「指针实现」](https://github.com/Cohanbb/mycode/blob/main/c/DS/SeqList_pointer.c)
+[Sequential List Using Pointer ｜ 顺序表「指针实现」](SeqList_pointer.c)
 
-[Link List ｜ 链表](https://github.com/Cohanbb/mycode/blob/main/c/DS/LinkList.c)
+[Link List ｜ 链表](LinkList.c)
 
 ## Stack and Queue 栈和队列
 
 ### Stack 栈
 
-[Sequential Stack ｜ 栈「顺序结构」](https://github.com/Cohanbb/mycode/blob/main/c/DS/SeqStack.c)
+[Sequential Stack ｜ 栈「顺序结构」](SeqStack.c)
 
-[Link Stack ｜ 栈「链式结构」](https://github.com/Cohanbb/mycode/blob/main/c/DS/LinkStack.c)
+[Link Stack ｜ 栈「链式结构」](LinkStack.c)
 
 ### Queue 队列
 
-[Sequential Queue ｜ 队列「顺序结构」](https://github.com/Cohanbb/mycode/blob/main/c/DS/SeqQueue.c)
+[Sequential Queue ｜ 队列「顺序结构」](SeqQueue.c)
 
-[Link Queue ｜ 队列「链式结构」](https://github.com/Cohanbb/mycode/blob/main/c/DS/LinkQueue.c)
+[Link Queue ｜ 队列「链式结构」](LinkQueue.c)
 
 ## Tree 树
 
