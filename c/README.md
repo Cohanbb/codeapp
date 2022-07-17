@@ -20,7 +20,7 @@ I will keep updating this directory.
 
 1.[数据结构](DS/README.md)代码。
 
-2.[计算机系统](experiment/README.md)代码。
+2.[计算机系统](experiment/.)代码。
 
 ...
 
