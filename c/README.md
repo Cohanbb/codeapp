@@ -6,7 +6,7 @@ At this directory you can see:
 
 1. [Data Structure](DS/README.md) codes. 
 
-2. [Computer System](experiment/README.md) codes about computer system.
+2. [Computer System](experiment/.) codes about computer system.
 
 ...
 
