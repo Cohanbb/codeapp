@@ -1,13 +1,14 @@
+#include "LinkList.h"
 #include <stdio.h>
 #include <malloc.h>
 
-typedef struct LNode {
+struct LNode {
     int data;
     struct LNode *next;
-} lnode, *linklist;
+};
 
 /* Initialize Link List 初始化链表 */
-linklist InitList(linklist *L) {
+void InitList(linklist *L) {
     *L = (lnode *)malloc(sizeof(lnode));
     if (*L == NULL) {
         printf("Fail To Init!\n");
@@ -16,6 +17,7 @@ linklist InitList(linklist *L) {
     (*L)->next = NULL;
 }
 
+/* Empty or not 判断链表是否为空  */
 int Empty(linklist L) {
     return L->next == NULL;
 }
@@ -57,7 +59,7 @@ void DeleteElem(linklist *L, int i, int *e) {
         return;
     }
     lnode *q = p->next; // q 指向要删除的结点
-    e = q->data;
+    *e = q->data;
     p->next = q->next;
     free(q); // 释放该结点内存
 }
@@ -97,16 +99,18 @@ void DestroyList(linklist *L) {
     }
 }
 
+/*
 int main() {
     linklist list;
     int e;
-    InitList(list);
-    InsertElem(list, 1, 1);
-    InsertElem(list, 2, 2);
-    InsertElem(list, 3, 3);
-    DeleteElem(list, 2, &e);
+    InitList(&list);
+    InsertElem(&list, 1, 1);
+    InsertElem(&list, 2, 2);
+    InsertElem(&list, 3, 3);
+    DeleteElem(&list, 2, &e);
     PrintList(list);
     printf("Delete element is %d\n", e);
-    DestroyList(list);
+    DestroyList(&list);
     return 0;
 }
+ */
