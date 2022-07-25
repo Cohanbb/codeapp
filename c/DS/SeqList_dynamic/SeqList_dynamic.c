@@ -6,7 +6,7 @@ void InitList(sqlistd *L) {
     L->maxsize = Initsize;
     L->data = (int *)malloc(sizeof(int) * L->maxsize);
     L->length = 0;
-    for (int i = 0; i < L->maxsize; i++)
+    for (int i = 0; i < L->maxsize; ++i)
         *(L->data + i) = 0;
 }
 
@@ -19,7 +19,7 @@ void ExtendList(sqlistd *L, int n) {
     int *p = L->data; // p 指向原地址
     L->maxsize += n; // 扩容
     L->data = (int *)malloc(sizeof(int) * L->maxsize); // 开辟新地址
-    for (int i = 0; i < L->length; i++)
+    for (int i = 0; i < L->length; ++i)
         *(L->data + i) = *(p + i);
     free(p); // 释放 p 指向的内存
     p = NULL; // p 置空
@@ -33,10 +33,10 @@ void InsertElem(sqlistd *L, int i, int e) {
     }
     if (L->length == L->maxsize)
         ExtendList(L, 1);
-    for (int j = L->length; j >= i; j--)
+    for (int j = L->length; j >= i; --j)
         *(L->data + j) = *(L->data + j - 1);
     *(L->data + i - 1) = e;
-    L->length++;
+    ++(L->length);
 }
 
 /* Delete Element 删除元素 */
@@ -46,15 +46,15 @@ void DeleteElem(sqlistd *L, int i, int *e) {
         return;
     }
     e = *(L->data + i - 1);
-    for (int j = i; j < L->length; j++)
+    for (int j = i; j < L->length; ++j)
         *(L->data + j - 1) = *(L->data + j);
     *(L->data + L->length - 1) = 0;
-    L->length--;
+    --(L->length);
 }
 
 /* Search Element By Value 按值查找 */
 void LocateElem(sqlistd L, int *i, int e) {
-    for (int j = 0; j < L.length; j++) {
+    for (int j = 0; j < L.length; ++j) {
         if (*(L.data + j) == e) {
             *i = j + 1;
             return;
@@ -69,7 +69,7 @@ void PrintList(sqlistd L) {
         printf("Empty List!\n");
         return;
     }
-    for (int i = 0; i < L.length; i++)
+    for (int i = 0; i < L.length; ++i)
         printf("%d\n", *(L.data + i));
 }
 
