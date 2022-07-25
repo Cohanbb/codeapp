@@ -4,9 +4,9 @@
 /* Initialize Sequential Queue 初始化顺序结构循环队列 */
 void InitQueue(sqqueue *Q) {
     Q->maxsize = Initsize;
-    Q->data = (int *)malloc(sizeof(int) * Q->maxsize);
+    Q->data = (int *)malloc(sizeof (int) * Q->maxsize);
     Q->rear = Q->front = 0;
-    for (int i = 0; i < Q->maxsize; i++)
+    for (int i = 0; i < Q->maxsize; ++i)
         Q->data[i] = 0;
 }
 
@@ -20,8 +20,8 @@ void ExtendQueue(sqqueue *Q, int n) {
     int i, j;
     j = Q->maxsize;
     Q->maxsize += n; // 扩容
-    Q->data = (int *)malloc(sizeof(int) * Q->maxsize); // 开辟新地址
-    for (i = 0; i < (Q->rear + j - Q->front) % j; i++)
+    Q->data = (int *)malloc(sizeof (int) * Q->maxsize); // 开辟新地址
+    for (i = 0; i < (Q->rear + j - Q->front) % j; ++i)
         Q->data[i] = p[(Q->front + i) % j];
     free(p); // 释放原地址
     p = NULL; // p 置空
@@ -51,7 +51,7 @@ void PrintQueue(sqqueue Q) {
         printf("Empty Queue!\n");
         return;
     }
-    for (int i = 0; i < (Q.rear + Q.maxsize - Q.front) % Q.maxsize; i++)
+    for (int i = 0; i < (Q.rear + Q.maxsize - Q.front) % Q.maxsize; ++i)
         printf("%d\n", Q.data[(Q.front + i) % Q.maxsize]);
 }
 
