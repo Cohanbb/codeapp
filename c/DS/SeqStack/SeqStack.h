@@ -2,6 +2,7 @@
 #define __SEQSTACK_H__
 #include <stdio.h>
 #include <stdlib.h>
+#define Initsize 20 // Initial Size 初始容量
 
 /* Definition of Sequential Stack 定义顺序栈 */
 typedef struct SeqStack {

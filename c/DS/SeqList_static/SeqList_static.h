@@ -1,6 +1,7 @@
 #ifndef __SEQLIST_STATIC_H__
 #define __SEQLIST_STATIC_H__
 #include <stdio.h>
+#define Maxsize 20
 
 /* Definition of Dynamic Static List 静态顺序表的定义 */
 typedef struct SeqList_static {

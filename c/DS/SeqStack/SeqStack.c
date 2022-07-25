@@ -1,6 +1,5 @@
 /* 使用动态数组实现的顺序结构栈 */
 #include "SeqStack.h"
-#define Initsize 20 // Initial Size 初始容量
 
 /* Initialize Sequential Stack 初始化顺序结构栈 */
 void InitStack(sqstack *S) {

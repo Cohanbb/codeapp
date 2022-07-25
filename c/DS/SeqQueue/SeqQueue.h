@@ -2,6 +2,7 @@
 #define __SEQQUEUE_H__
 #include <stdio.h>
 #include <stdlib.h>
+#define Initsize 20 // Initial Size 初始容量
 
 /* Definition of Sequential Queue 定义顺序队列 */
 typedef struct SeqQueue {

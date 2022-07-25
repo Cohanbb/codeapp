@@ -1,6 +1,5 @@
 /* 使用动态数组实现的顺序表 */
 #include "SeqList_dynamic.h"
-#define Initsize 20 // Initial maxsize
 
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlistd *L) {

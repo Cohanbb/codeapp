@@ -2,6 +2,7 @@
 #define __SEQLIST_DYNAMIC_H__
 #include <stdio.h>
 #include <stdlib.h>
+#define Initsize 20 // Initial maxsize
 
 /* Definition of Dynamic Sequential List 动态顺序表的定义 */
 typedef struct SeqList_dynamic {

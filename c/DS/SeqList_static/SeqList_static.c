@@ -1,6 +1,5 @@
 /* 使用静态数组实现的顺序表 */
 #include "SeqList_static.h"
-#define Maxsize 20
 
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlists *L) {

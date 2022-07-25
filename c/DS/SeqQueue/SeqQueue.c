@@ -1,6 +1,5 @@
 /* 使用动态数组实现的循环队列 */
 #include "SeqQueue.h"
-#define Initsize 20 // Initial Size 初始容量
 
 /* Initialize Sequential Queue 初始化顺序结构循环队列 */
 void InitQueue(sqqueue *Q) {
