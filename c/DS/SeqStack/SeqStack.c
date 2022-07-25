@@ -1,13 +1,14 @@
 /* 使用动态数组实现的顺序结构栈 */
-#include <stdio.h>
-#include <malloc.h>
+#include "SeqStack.h"
 
 #define Initsize 20 // Initial Size 初始容量
 
-typedef struct SeqStack {
+// typedef struct SeqStack sqstack;
+/* Definition of Sequential Stack 定义顺序栈 */
+struct SeqStack {
     int *data;
     int top, maxsize;
-} sqstack;
+};
 
 /* Initialize Sequential Stack 初始化顺序结构栈 */
 void InitStack(sqstack *S) {

@@ -1,7 +1,7 @@
 #include "LinkList.h"
-#include <stdio.h>
-#include <malloc.h>
 
+// typedef struct LNode lnode, *linklist;
+/* Definition of LinkList Node 定义链表的结点 */
 struct LNode {
     int data;
     struct LNode *next;
@@ -98,7 +98,6 @@ void DestroyList(linklist *L) {
         p = *L;
     }
 }
-
 /*
 int main() {
     linklist list;

@@ -1,27 +1,27 @@
 /* 使用静态数组实现的顺序表 */
-#include <stdio.h>
-#include <malloc.h>
-
+#include "SeqList_static.h"
 #define Maxsize 20
 
-typedef struct SeqList {
+// typedef struct SeqList_static sqlists;
+/* Definition of Dynamic Static List 静态顺序表的定义 */
+struct SeqList_static {
     int length;
     int data[Maxsize];
-} sqlist;
+};
 
 /* Initialize Sequential List 初始化顺序表 */
-void InitList(sqlist *L) {
+void InitList(sqlists *L) {
     for (int i = 0; i < Maxsize; i++)
         L->data[i] = 0;
     L->length = 0;
 }
 
-int Empty(sqlist L) {
+int Empty(sqlists L) {
     return L.length == 0;
 }
 
 /* Insert element 插入元素 */
-void InsertElem(sqlist *L, int i, int e) {
+void InsertElem(sqlists *L, int i, int e) {
     if (i <= 0 || i > L->length + 1) {
         printf("Invalid Position!\n");
         return;
@@ -37,7 +37,7 @@ void InsertElem(sqlist *L, int i, int e) {
 }
 
 /* Delete element 删除元素 */
-void DeleteElem(sqlist *L, int i, int *e) {
+void DeleteElem(sqlists *L, int i, int *e) {
     if (i <= 0 || i > L->length) {
         printf("Invalid Position!");
         return;
@@ -50,7 +50,7 @@ void DeleteElem(sqlist *L, int i, int *e) {
 }
 
 /* Search Element by Value 按值查找 */
-void LocateElem(sqlist L, int *i, int e) {
+void LocateElem(sqlists L, int *i, int e) {
     for (int j = 0; j < L.length; j++) {
         if (L.data[j] == e) {
             *i = j + 1;
@@ -61,7 +61,7 @@ void LocateElem(sqlist L, int *i, int e) {
 }
 
 /* Print Sequential List 打印顺序表 */
-void PrintList(sqlist L) {
+void PrintList(sqlists L) {
     if (Empty(L)) {
         printf("Empty List!\n");
         return;
@@ -71,7 +71,7 @@ void PrintList(sqlist L) {
 }
 
 int main() {
-    sqlist list;
+    sqlists list;
     int i, e;
     InitList(&list);
     InsertElem(&list, 1, 1); // insert 1 at the first position

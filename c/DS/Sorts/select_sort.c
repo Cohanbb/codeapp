@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "Sorts.h"
 
 void select_sort(int a[], int n) {
 

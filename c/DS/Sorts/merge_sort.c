@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <malloc.h>
+#include "Sorts.h"
 
 /* 非递归实现归并排序 */
 void merge_sort(int a[], int n) {

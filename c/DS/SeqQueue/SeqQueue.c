@@ -1,13 +1,13 @@
 /* 使用动态数组实现的循环队列 */
-#include <stdio.h>
-#include <malloc.h>
-
+#include "SeqQueue.h"
 #define Initsize 20 // Initial Size 初始容量
 
-typedef struct SeqQueue {
+// typedef struct SeqQueue sqqueue;
+/* Definition of Sequential Queue 定义顺序队列 */
+struct SeqQueue {
     int *data;
     int front, rear, maxsize;
-} sqqueue;
+};
 
 /* Initialize Sequential Queue 初始化顺序结构循环队列 */
 void InitQueue(sqqueue *Q) {

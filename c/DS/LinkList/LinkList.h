@@ -1,8 +1,9 @@
-#ifndef __LINKLIST_H
-#define __LINKLIST_H
+#ifndef __LINKLIST_H__
+#define __LINKLIST_H__
+#include <stdio.h>
+#include <stdlib.h>
 
-typedef struct LNode lnode;
-typedef struct LNode *linklist;
+typedef struct LNode lnode, *linklist;
 
 /* Initialize Link List 初始化链表 */
 void InitList(linklist *L);
