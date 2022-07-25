@@ -3,7 +3,7 @@
 
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlists *L) {
-    for (int i = 0; i < Maxsize; i++)
+    for (int i = 0; i < Maxsize; ++i)
         L->data[i] = 0;
     L->length = 0;
 }
@@ -22,10 +22,10 @@ void InsertElem(sqlists *L, int i, int e) {
         printf("Oversize!\n");
         return;
     }
-    for (int j = L->length; j >= i; j--)
+    for (int j = L->length; j >= i; --j)
         L->data[j] = L->data[j - 1];
     L->data[i - 1] = e;
-    L->length++;
+    ++(L->length);
 }
 
 /* Delete element 删除元素 */
@@ -35,15 +35,15 @@ void DeleteElem(sqlists *L, int i, int *e) {
         return;
     }
     *e = L->data[i - 1];
-    for (int j = i; j < L->length; j++)
+    for (int j = i; j < L->length; ++j)
         L->data[j - 1] = L->data[j];
     L->data[L->length - 1] = 0;
-    L->length--;
+    -+(L->length);
 }
 
 /* Search Element by Value 按值查找 */
 void LocateElem(sqlists L, int *i, int e) {
-    for (int j = 0; j < L.length; j++) {
+    for (int j = 0; j < L.length; ++j) {
         if (L.data[j] == e) {
             *i = j + 1;
             return;
