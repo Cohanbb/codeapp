@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SeqStack sqstack;
+/* Definition of Sequential Stack 定义顺序栈 */
+typedef struct SeqStack {
+    int *data;
+    int top, maxsize;
+} sqstack;
 
 /* Initialize Sequential Stack 初始化顺序结构栈 */
 void InitStack(sqstack *S);

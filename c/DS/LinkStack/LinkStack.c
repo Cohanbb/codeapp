@@ -1,13 +1,6 @@
 /* 链式结构的栈（带头结点） */
 #include "LinkStack.h"
 
-// typedef struct LNode lnode, *linkstack;
-/* Definition of Link Stack Node 定义链式栈结点 */
-struct LNode {
-    int data;
-    struct LNode *next; 
-};
-
 /* Initialize Link Stack 初始化链式结构栈 */
 void InitStack(linkstack *S) {
     *S = (lnode *)malloc(sizeof(lnode));

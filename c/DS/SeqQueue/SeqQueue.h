@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SeqQueue sqqueue;
+/* Definition of Sequential Queue 定义顺序队列 */
+typedef struct SeqQueue {
+    int *data;
+    int front, rear, maxsize;
+} sqqueue;
 
 /* Initialize Sequential Queue 初始化顺序结构循环队列 */
 void InitQueue(sqqueue *Q);

@@ -1,20 +1,6 @@
 /* 链式结构的队列 */
 #include "LinkQueue.h"
 
-// typedef struct LNode lnode;
-/* Definition of Link Queue Node 定义链式队列结点 */
-struct LNode {
-    int data;
-    struct LNode *next; 
-};
-
-// typedef struct LinkQueue linkqueue;
-/* Definition of Link Queue 定义链式队列 */
-struct LinkQueue {
-    lnode *front;
-    lnode *rear;
-};
-
 /* Initialize Link Queue 初始化链式结构队列 */
 void InitQueue(linkqueue *Q) {
     Q->front = Q->rear = (lnode *)malloc(sizeof(lnode));

@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SeqList_dynamic sqlistd;
+/* Definition of Dynamic Sequential List 动态顺序表的定义 */
+typedef struct SeqList_dynamic {
+    int *data;
+    int length, maxsize;
+} sqlistd;
 
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlistd *L);

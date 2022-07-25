@@ -2,13 +2,6 @@
 #include "SeqQueue.h"
 #define Initsize 20 // Initial Size 初始容量
 
-// typedef struct SeqQueue sqqueue;
-/* Definition of Sequential Queue 定义顺序队列 */
-struct SeqQueue {
-    int *data;
-    int front, rear, maxsize;
-};
-
 /* Initialize Sequential Queue 初始化顺序结构循环队列 */
 void InitQueue(sqqueue *Q) {
     Q->maxsize = Initsize;
@@ -71,16 +64,4 @@ void DestroyQueue(sqqueue *Q) {
     Q->data = NULL; // 指针置空
     Q->rear = Q->front = 0;
     Q->maxsize = 0;
-}
-
-int main() {
-    sqqueue queue;
-    int e;
-    InitQueue(&queue);
-    EnterQueue(&queue, 1);
-    ExitQueue(&queue, &e);
-    EnterQueue(&queue, 2);
-    PrintQueue(queue);
-    DestroyQueue(&queue);
-    return 0;
 }

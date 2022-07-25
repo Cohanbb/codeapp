@@ -2,13 +2,6 @@
 #include "SeqList_dynamic.h"
 #define Initsize 20 // Initial maxsize
 
-// typedef struct SeqList_dynamic sqlistd;
-/* Definition of Dynamic Sequential List 动态顺序表的定义 */
-struct SeqList_dynamic {
-    int *data;
-    int length, maxsize;
-};
-
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlistd *L) {
     L->maxsize = Initsize;
@@ -89,17 +82,4 @@ void DestroyList(sqlistd *L) {
     L->data = NULL; // 指针置空
     L->length = 0;
     L->maxsize = 0;
-}
-
-int main() {
-    sqlistd list;
-    int i, e;
-    InitList(&list);
-    InsertElem(&list, 1, 2);
-    InsertElem(&list, 2, 3);
-    InsertElem(&list, 3, 4);
-    DeleteElem(&list, 2, &e);
-    PrintList(list);
-    DestroyList(&list);
-    return 0;
 }

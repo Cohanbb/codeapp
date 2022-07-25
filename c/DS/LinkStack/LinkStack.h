@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct LNode lnode, *linkstack;
+/* Definition of Link Stack Node 定义链式栈结点 */
+typedef struct LNode {
+    int data;
+    struct LNode *next; 
+} lnode, *linkstack;
 
 /* Initialize Link Stack 初始化链式结构栈 */
 void InitStack(linkstack *S);

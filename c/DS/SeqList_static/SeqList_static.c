@@ -2,13 +2,6 @@
 #include "SeqList_static.h"
 #define Maxsize 20
 
-// typedef struct SeqList_static sqlists;
-/* Definition of Dynamic Static List 静态顺序表的定义 */
-struct SeqList_static {
-    int length;
-    int data[Maxsize];
-};
-
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlists *L) {
     for (int i = 0; i < Maxsize; i++)
@@ -70,15 +63,3 @@ void PrintList(sqlists L) {
         printf("%d\n", L.data[i]);
 }
 
-int main() {
-    sqlists list;
-    int i, e;
-    InitList(&list);
-    InsertElem(&list, 1, 1); // insert 1 at the first position
-    InsertElem(&list, 2, 3); // insert 3 at the second position
-    DeleteElem(&list, 1, &e); // delete content at the first position
-    printf("%d\n", e);
-    PrintList(list);
-    LocateElem(list, &i, 1);
-    return 0;
-}

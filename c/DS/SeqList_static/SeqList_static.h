@@ -2,7 +2,11 @@
 #define __SEQLIST_STATIC_H__
 #include <stdio.h>
 
-typedef struct SeqList_static sqlists;
+/* Definition of Dynamic Static List 静态顺序表的定义 */
+typedef struct SeqList_static {
+    int length;
+    int data[Maxsize];
+} sqlists;
 
 /* Initialize Sequential List 初始化顺序表 */
 void InitList(sqlists *L);

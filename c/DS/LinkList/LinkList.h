@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct LNode lnode, *linklist;
+/* Definition of LinkList Node 定义链表的结点 */
+typedef struct LNode {
+    int data;
+    struct LNode *next;
+} lnode, *linklist;
 
 /* Initialize Link List 初始化链表 */
 void InitList(linklist *L);
