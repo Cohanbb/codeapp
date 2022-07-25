@@ -4,7 +4,7 @@
 /* Initialize Sequential Stack 初始化顺序结构栈 */
 void InitStack(sqstack *S) {
     S->maxsize = Initsize;
-    S->data = (int *)malloc(sizeof(int) * S->maxsize);
+    S->data = (int *)malloc(sizeof (int) * S->maxsize);
     S->top = -1;
 }
 
@@ -16,8 +16,8 @@ int Empty(sqstack S) {
 void ExtendStack(sqstack *S, int n) {
     int *p = S->data; // p 指向原地址
     S->maxsize += n; // 扩容
-    S->data = (int *)malloc(sizeof(int) * S->maxsize); // 开辟新地址
-    for (int i = 0; i <= S->top; i++)
+    S->data = (int *)malloc(sizeof (int) * S->maxsize); // 开辟新地址
+    for (int i = 0; i <= S->top; ++i)
         S->data[i] = p[i];
     free(p); // 释放原地址
     p = NULL; // p 置空
@@ -45,7 +45,7 @@ void PrintStack(sqstack S) {
         printf("Empty Stack!\n");
         return;
     }
-    for (int i = 0; i <= S.top; i++)
+    for (int i = 0; i <= S.top; ++i)
         printf("%d\n", S.data[i]);
 }
 
