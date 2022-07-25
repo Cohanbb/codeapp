@@ -3,10 +3,10 @@
 /* Insert Sort 直接插入排序 */
 void insert_sort(int a[], int n) {
     int temp, i, j; // temp conserves element temporarily
-    for (i = 1; i < n; i++)
+    for (i = 1; i < n; ++i)
         if (a[i] < a[i - 1]) {
             temp = a[i];
-            for (j = i - 1; j >= 0 && temp < a[j]; j--) // find the position to insert
+            for (j = i - 1; j >= 0 && temp < a[j]; --j) // find the position to insert
                 a[j + 1] = a[j];                        // move backwards to making room for inserting
             a[j + 1] = temp;                            // insert the element
         }
@@ -15,7 +15,7 @@ void insert_sort(int a[], int n) {
 /* Binary Insert Sort 折半插入排序 */
 void insert_sortt(int a[], int n) {
     int low, high, mid, temp, i, j; // step is length of per comparison
-    for (i = 1; i < n; i++) {
+    for (i = 1; i < n; ++i) {
         low = 0;
         high = i - 1;
         temp = a[i];
@@ -26,7 +26,7 @@ void insert_sortt(int a[], int n) {
             else
                 low = mid + 1;
         }
-        for (j = i - 1; j >= high + 1; j--)
+        for (j = i - 1; j >= high + 1; --j)
             a[j + 1] = a[j];
         a[high + 1] = temp;
     }
@@ -36,7 +36,7 @@ void insert_sortt(int a[], int n) {
 void shell_sort(int a[], int n) {
     int step, temp, i, j;
     for (step = n / 2; step >= 1; step /= 2)
-        for (i = step; i < n; i++)
+        for (i = step; i < n; ++i)
             if (a[i] < a[i - step]) {
                 temp = a[i];
                 for (j = i - step; j >= 0 && temp < a[j]; j -= step)
@@ -46,13 +46,13 @@ void shell_sort(int a[], int n) {
 }
 
 void showarray(int a[], int n) {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; ++i)
         printf("%d\n", a[i]);
 }
 
 int main() {
     int a[10];
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10; ++i)
         scanf("%d", &a[i]);
 
     insert_sort(a, 10);
