@@ -6,7 +6,7 @@ void merge_sort(int a[], int n) {
     int *t;
     int step = 1;
     int *p = a;
-    int *q = (int *)malloc(sizeof(int *) * n);
+    int *q = (int *)malloc(sizeof (int *) * n);
     int *temp = q;
     while (step < n) {
         i = 0;
@@ -33,18 +33,18 @@ void merge_sort(int a[], int n) {
         q = t;
     }
     if (a != p)
-        memcpy(a, p, sizeof(int *) * n);
+        memcpy(a, p, sizeof (int *) * n);
     free(temp);
 }
 
 void showarray(int a[], int n) {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; ++i)
         printf("%d\n", a[i]);
 }
 
 int main() {
     int a[10];
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10; ++i)
         scanf("%d", &a[i]);
 
     merge_sort(a, 10);
