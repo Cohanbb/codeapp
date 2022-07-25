@@ -25,7 +25,7 @@ void InsertElem(sqlists *L, int i, int e) {
     for (int j = L->length; j >= i; --j)
         L->data[j] = L->data[j - 1];
     L->data[i - 1] = e;
-    ++(L->length);
+    ++L->length;
 }
 
 /* Delete element 删除元素 */
@@ -38,7 +38,7 @@ void DeleteElem(sqlists *L, int i, int *e) {
     for (int j = i; j < L->length; ++j)
         L->data[j - 1] = L->data[j];
     L->data[L->length - 1] = 0;
-    --(L->length);
+    --L->length;
 }
 
 /* Search Element by Value 按值查找 */
