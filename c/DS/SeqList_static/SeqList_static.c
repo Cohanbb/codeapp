@@ -31,14 +31,14 @@ void InsertElem(sqlists *L, int i, int e) {
 /* Delete element 删除元素 */
 void DeleteElem(sqlists *L, int i, int *e) {
     if (i <= 0 || i > L->length) {
-        printf("Invalid Position!");
+        printf("Invalid Position!\n");
         return;
     }
     *e = L->data[i - 1];
     for (int j = i; j < L->length; ++j)
         L->data[j - 1] = L->data[j];
     L->data[L->length - 1] = 0;
-    -+(L->length);
+    --(L->length);
 }
 
 /* Search Element by Value 按值查找 */
@@ -58,7 +58,7 @@ void PrintList(sqlists L) {
         printf("Empty List!\n");
         return;
     }
-    for (int i = 0; i < L.length; i++)
+    for (int i = 0; i < L.length; ++i)
         printf("%d\n", L.data[i]);
 }
 
